@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BODRĒN | قهوه‌ای که طعم را بیدار می‌کند</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&family=Vazirmatn:wght@500;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="progress" id="prog"></div>
+<header class="nav-wrap">
+  <nav class="nav" aria-label="منوی اصلی">
+    <a class="logo" href="#home">BODRĒN</a>
+    <ul class="nav-links" id="links">
+      <li><a class="on" href="#home">خانه</a></li>
+      <li><a href="#menu">منو</a></li>
+      <li><a href="#about">درباره ما</a></li>
+      <li><a href="#gallery">گالری</a></li>
+      <li><a href="#reviews">نظرات</a></li>
+      <li><a href="#contact">تماس</a></li>
+    </ul>
+    <button class="cart" id="cart-btn" aria-label="سبد خرید"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4h2l2.4 11h10l2-8H6.5"/><circle cx="9" cy="20" r="1.5"/><circle cx="17" cy="20" r="1.5"/></svg><b id="cart-count">۰</b></button>
+    <a class="btn btn-sm" href="#menu">سفارش</a>
+    <button class="burger" aria-label="باز کردن منو" aria-expanded="false"><span></span><span></span></button>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="ag-bg" id="ag" aria-hidden="true"></div>
+  <canvas id="hero3d" aria-hidden="true"></canvas>
+  <div class="hero-text">
+    <h1>طعم بی‌نظیر را در هر جرعه کشف کن!</h1>
+    <p>قهوه برای ما فقط یک نوشیدنی نیست، هنر است. شما را به سفری منحصربه‌فرد دعوت می‌کنیم؛ جایی که هر جرعه، دیدار با طعمی کامل است.</p>
+    <div class="hero-cta"><a class="btn" href="#menu">انتخاب قهوه</a><a class="ghost" href="#quiz">کدام قهوه مال من است؟</a></div>
+  </div>
+  <div class="hero-photos">
+    <figure class="ph ph1"><img src="ribbed.jpg" alt="لیوان قهوهٔ بیرون‌بر با آستین قهوه‌ای شیاردار" width="640" height="640"></figure>
+    <figure class="ph ph2"><img src="kraft.jpg" alt="لیوان کاغذی با آستین کرافت و دانه‌های قهوه" width="640" height="640"></figure>
+    <div class="chip">★ ۴٫۹ <span>از ۲٬۰۰۰ نظر مهمانان</span></div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="track"><span>تازه‌برشته هر صبح</span><span>دانهٔ اصل و بدون واسطه</span><span>دم‌آوری با عشق</span><span>ارسال سریع</span><span>طعمی که بیدارت می‌کند</span></div></div>
+
+<section class="stats reveal" id="stats">
+  <div class="stat"><b data-to="8">۰</b><span>سال تجربهٔ برشت</span></div>
+  <div class="stat"><b data-to="12">۰</b><span>نوع دانهٔ منتخب</span></div>
+  <div class="stat"><b data-to="5000" data-suf="+">۰</b><span>مهمان راضی</span></div>
+  <div class="stat"><b data-to="4.9" data-dec="1">۰</b><span>میانگین امتیاز</span></div>
+</section>
+
+<section class="products" id="menu">
+  <h2>منوی BODRĒN</h2>
+  <div class="tabs">
+    <button class="tab on" data-f="all">همه</button><button class="tab" data-f="hot">گرم</button><button class="tab" data-f="cold">سرد</button><button class="tab" data-f="beans">دانهٔ قهوه</button>
+  </div>
+  <div class="grid-3 reveal">
+    <article class="card" data-id="1" data-cat="hot" data-name="کاپوچینو" data-price="1500000"><span class="rate">۴٫۸ ★</span><span class="tag">پرفروش</span><img class="card-img" src="art.jpg" alt="کاپوچینو با لاته‌آرت قلب" width="320" height="320"><h3>کاپوچینو</h3><p>دبل اسپرسو با فوم شیر مخملی و طرح لاته‌آرت.</p><div class="card-foot"><strong>۱٬۵۰۰٬۰۰۰ <small>ریال</small></strong><button class="add" aria-label="افزودن کاپوچینو">+</button></div></article>
+    <article class="card" data-id="2" data-cat="cold" data-name="لاتهٔ یخی" data-price="1700000"><span class="rate">۵٫۰ ★</span><img class="card-img" src="iced.jpg" alt="لاتهٔ یخی با یخ و شیر" width="320" height="320"><h3>لاتهٔ یخی</h3><p>اسپرسو، شیر سرد و یخ؛ خنک و کرمی.</p><div class="card-foot"><strong>۱٬۷۰۰٬۰۰۰ <small>ریال</small></strong><button class="add" aria-label="افزودن لاتهٔ یخی">+</button></div></article>
+    <article class="card" data-id="3" data-cat="cold" data-name="موکا فراپه" data-price="1900000"><span class="rate">۴٫۷ ★</span><span class="tag">جدید</span><img class="card-img" src="frappe.jpg" alt="فراپهٔ شکلاتی با خامه" width="320" height="320"><h3>موکا فراپه</h3><p>فراپهٔ شکلاتی با خامه و سس شکلات.</p><div class="card-foot"><strong>۱٬۹۰۰٬۰۰۰ <small>ریال</small></strong><button class="add" aria-label="افزودن موکا فراپه">+</button></div></article>
+    <article class="card" data-id="4" data-cat="hot" data-name="آمریکانو" data-price="1200000"><span class="rate">۴٫۶ ★</span><img class="card-img" src="ribbed.jpg" alt="آمریکانو در لیوان بیرون‌بر" width="320" height="320"><h3>آمریکانو</h3><p>اسپرسو با آب داغ؛ ساده، پررنگ و بیدارکننده.</p><div class="card-foot"><strong>۱٬۲۰۰٬۰۰۰ <small>ریال</small></strong><button class="add" aria-label="افزودن آمریکانو">+</button></div></article>
+    <article class="card" data-id="5" data-cat="hot" data-name="فلت‌وایت" data-price="1600000"><span class="rate">۴٫۹ ★</span><img class="card-img" src="kraft.jpg" alt="فلت‌وایت در لیوان کرافت" width="320" height="320"><h3>فلت‌وایت</h3><p>اسپرسوی دوبل با شیر بخارداده؛ ملایم و غلیظ.</p><div class="card-foot"><strong>۱٬۶۰۰٬۰۰۰ <small>ریال</small></strong><button class="add" aria-label="افزودن فلت‌وایت">+</button></div></article>
+    <article class="card" data-id="6" data-cat="beans" data-name="دانهٔ قهوه ۲۵۰ گرمی" data-price="4800000"><span class="rate">۴٫۸ ★</span><img class="card-img" src="beans.jpg" alt="دانه‌های برشته‌شدهٔ قهوه" width="320" height="320"><h3>دانهٔ قهوه ۲۵۰ گرمی</h3><p>ترکیب عربیکا و روبوستا با برشت متوسط.</p><div class="card-foot"><strong>۴٬۸۰۰٬۰۰۰ <small>ریال</small></strong><button class="add" aria-label="افزودن دانهٔ قهوه">+</button></div></article>
+  </div>
+</section>
+
+<section class="about reveal" id="about">
+  <h2>BODRĒN یعنی</h2>
+  <div class="about-grid">
+    <div class="col">
+      <div class="info" data-n="۱"><h3>دانهٔ باکیفیت</h3><p>عشق ما به قهوه از انتخاب دانه شروع می‌شود و فقط با مزارع مطمئن کار می‌کنیم.</p></div>
+      <div class="info" data-n="۲"><h3>فضایی الهام‌بخش و دنج</h3><p>نور گرم، مبل‌های نرم و موسیقی آرام، حال شما را خوب می‌کند.</p></div>
+    </div>
+    <div class="center">
+      <canvas id="about3d" aria-label="لیوان سه‌بعدی BODRĒN؛ برای چرخاندن بکشید"></canvas>
+      <a class="btn" href="#menu">سفارش</a>
+    </div>
+    <div class="col">
+      <div class="info" data-n="۳"><h3>توجه ویژه به هر مهمان</h3><p>طعم، میزان تلخی و نوع شیر را مطابق حال شما تنظیم می‌کنیم.</p></div>
+      <div class="info" data-n="۴"><h3>تیم باریستای حرفه‌ای</h3><p>باریستاهای ما همه‌چیز را دربارهٔ قهوه می‌دانند و هر نوشیدنی را با دقت می‌سازند.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="process reveal" id="process">
+  <div class="p-photo"><img src="beans.jpg" alt="تلی از دانه‌های قهوهٔ برشته" width="640" height="640"></div>
+  <div class="p-steps">
+    <h2>از دانه تا لیوان</h2>
+    <ol>
+      <li><h3>انتخاب دانه</h3><p>عربیکای منتخب را مستقیم از مزارع مطمئن تهیه می‌کنیم.</p></li>
+      <li><h3>برشت تازه</h3><p>دانه‌ها در دسته‌های کوچک برشته می‌شوند تا عطرشان حفظ شود.</p></li>
+      <li><h3>آسیاب و دم‌آوری</h3><p>هر فنجان درست قبل از دم‌آوری آسیاب می‌شود.</p></li>
+      <li><h3>سرو داغ</h3><p>نوشیدنی تازه، با دما و طعم دقیق، به دست شما می‌رسد.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="promo reveal">
+  <div><h2>اولین سفارشت ۲۰٪ تخفیف دارد</h2><p>کد زیر را هنگام ثبت سفارش وارد کن.</p></div>
+  <div class="code"><code dir="ltr" id="code">BODREN20</code><button class="btn btn-sm" id="copy">کپی کد</button></div>
+</section>
+
+<section class="cc-sec reveal" id="carousel">
+  <h2>چرخ‌فلک قهوه</h2>
+  <p class="cc-sub">بکش و بچرخان، یا روی هر قهوه بزن تا جلو بیاید.</p>
+  <div class="cc-wrap" id="cc"></div>
+</section>
+
+<section class="gallery reveal" id="gallery">
+  <h2>لحظه‌های BODRĒN</h2>
+  <div class="bento">
+    <button class="g g1" aria-label="بزرگ‌نمایی لاته‌آرت"><img src="art.jpg" alt="لاته‌آرت قلب روی فنجان مشکی" loading="lazy"><span>لاته‌آرت</span></button>
+    <button class="g" aria-label="بزرگ‌نمایی لاتهٔ یخی"><img src="iced.jpg" alt="لاتهٔ یخی" loading="lazy"><span>لاتهٔ یخی</span></button>
+    <button class="g" aria-label="بزرگ‌نمایی دانهٔ قهوه"><img src="beans.jpg" alt="دانهٔ قهوه" loading="lazy"><span>دانهٔ برشته</span></button>
+    <button class="g g4" aria-label="بزرگ‌نمایی فراپه"><img src="frappe.jpg" alt="فراپهٔ شکلاتی" loading="lazy"><span>فراپهٔ شکلاتی</span></button>
+  </div>
+</section>
+
+<section class="reviews reveal" id="reviews">
+  <h2>مهمان‌های ما چه می‌گویند</h2>
+  <div class="slides" id="slides">
+    <figure class="rv"><div class="stars">★★★★★</div><blockquote>بهترین لاته‌آرتی که تا حالا خورده‌ام. فضا هم آن‌قدر دنج است که ساعت‌ها می‌شود نشست.</blockquote><figcaption><i>س</i>سارا م.</figcaption></figure>
+    <figure class="rv"><div class="stars">★★★★★</div><blockquote>آمریکانوی بیرون‌برشان هر صبح مسیر محل کارم را نجات می‌دهد. سریع، داغ و همیشه تازه.</blockquote><figcaption><i>ع</i>علی ر.</figcaption></figure>
+    <figure class="rv"><div class="stars">★★★★☆</div><blockquote>فراپهٔ شکلاتی‌شان یک دسر کامل است. بسته‌بندی هم شیک و تمیز است.</blockquote><figcaption><i>ن</i>نیلوفر ک.</figcaption></figure>
+    <figure class="rv"><div class="stars">★★★★★</div><blockquote>دانهٔ قهوه را برای خانه می‌گیرم؛ عطرش از همان لحظهٔ باز کردن بسته شروع می‌شود.</blockquote><figcaption><i>م</i>مهدی ص.</figcaption></figure>
+  </div>
+  <div class="dots" id="dots"></div>
+</section>
+
+<section class="quiz-wrap reveal" id="quiz">
+  <div class="quiz">
+    <h2>بفهم کدام قهوه به تو می‌آید</h2>
+    <p class="q-text" id="q-text">به دو سؤال جواب بده تا نوشیدنی مناسب را پیشنهاد کنیم.</p>
+    <div class="q-opts" id="q-opts"><button class="btn" id="q-start">شروع</button></div>
+  </div>
+</section>
+</main>
+
+<footer id="contact">
+  <div class="foot">
+    <div class="f-brand"><span class="logo">BODRĒN</span><p>قهوهٔ تازه‌برشته، فضایی گرم و باریستاهایی که قهوه را دوست دارند.</p>
+      <form class="news" id="news"><input type="email" required placeholder="ایمیلت را بنویس" aria-label="ایمیل"><button class="btn btn-sm">عضویت</button></form></div>
+    <div><h4>دسترسی سریع</h4><ul><li><a href="#home">خانه</a></li><li><a href="#menu">منو</a></li><li><a href="#about">درباره ما</a></li><li><a href="#quiz">پیشنهاد قهوه</a></li></ul></div>
+    <div><h4>تماس با ما</h4><ul><li>تهران، خیابان ولیعصر، پلاک ۷</li><li><a href="tel:+982112345678" dir="ltr">۰۲۱-۱۲۳۴۵۶۷۸</a></li><li>هر روز، ۸ صبح تا ۱۰ شب</li><li><a href="mailto:hello@bodren.ir">hello@bodren.ir</a></li></ul></div>
+    <div><h4>ما را دنبال کنید</h4><ul><li><a href="https://instagram.com" target="_blank" rel="noopener">اینستاگرام</a></li><li><a href="https://t.me" target="_blank" rel="noopener">تلگرام</a></li><li><a href="https://wa.me" target="_blank" rel="noopener">واتس‌اپ</a></li></ul></div>
+  </div>
+  <p class="copy">© ۱۴۰۵ BODRĒN. تمام حقوق محفوظ است.</p>
+</footer>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="سبد خرید" aria-hidden="true">
+  <div class="d-head"><h3>سبد خرید</h3><button id="d-close" aria-label="بستن">×</button></div>
+  <div class="d-list" id="d-list"></div>
+  <div class="d-foot"><div class="total"><span>جمع کل</span><strong id="total">۰ ریال</strong></div><button class="btn" id="checkout">ثبت سفارش</button></div>
+</aside>
+<dialog id="lb"><img alt=""></dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="antigravity.js"></script>
+<script src="circular-carousel.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
